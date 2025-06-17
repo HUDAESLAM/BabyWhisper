@@ -1,0 +1,43 @@
+.header{
+    background-color: #E86924 ;
+    border-width: 3px;
+   
+  }
+ .e-mail{
+    color: #E86924;
+    background-color: #FFC5A6;
+ }  
+
+
+.profile-pic-container {
+   position: relative;
+   width: 150px;
+   height: 150px;
+   
+ }
+ 
+ .entre-profile-pic {
+   width: 100%;
+   height: 100%;
+   border-radius: 50%;
+   border: 2px solid grey;
+   
+   object-fit: cover;
+   cursor: pointer;
+ }
+ 
+ .entre-profile-pic-container:hover {
+   opacity: 0.8;
+ }
+
+ .btn{
+  border: 1px #E86924 solid ;
+  transition-duration: 1s;
+ }
+
+ .btn:hover{
+  color: white;
+  background-color: #E86924 ;
+ }
+
+ 

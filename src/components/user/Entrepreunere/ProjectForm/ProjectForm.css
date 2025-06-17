@@ -1,0 +1,25 @@
+.header h3{
+    color: #E86924 ;
+    background-color: white;
+}
+.header{
+   
+    background-color: white;
+}
+
+.btn{
+    /* background-color: #E86924; */
+    border: 1px  #E86924 solid;
+    border-radius: 5px;
+    color: rgb(0, 0, 0);
+    transition-duration:1s;
+}
+
+.btn:hover{
+    background-color: #E86924;
+    color: white;
+}
+
+input{
+    outline: none;
+}

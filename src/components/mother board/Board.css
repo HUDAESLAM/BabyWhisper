@@ -1,0 +1,19 @@
+.font-second {
+  font-family: var(--second-ff) !important;
+}
+
+.main{
+  color: var(--blue) !important;
+}
+
+.first{
+  color: var(--ruddy-blue) !important;
+}
+
+.second{
+  color: var(--third-color) !important  ;
+}
+
+.card {
+  box-shadow: 0 10px 20px rgba(128, 0, 128, 0.2) !important;
+}

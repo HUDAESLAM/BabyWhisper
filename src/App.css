@@ -1,0 +1,30 @@
+@import "bootstrap/scss/bootstrap.scss";
+:root {
+  --main-color: #decaf6;
+  --second-color: #bd97eb;
+  --third-color: #de9ee3;
+  --fourth-color: #9040f1;
+  --light: #f4edfc;
+  --lighter: #f8f9fa;
+  --white: #ffffff;
+  --dark: #0d0d0d;
+  --black: #000000;
+  --gray: #545454;
+  --light-gray: #77808b;
+  --blue: #091f46;
+  --light-blue: #004466;
+  --ruddy-blue: #76aeff;
+  --uranian-blue: #acd7ff;
+  --bg-light: #ffffff;
+  --bg-gray: #f4ecfd;
+  --bg-light-gray: #f5effd;
+  --main-ff: "Jua", sans-serif;
+  --second-ff: "Inter", sans-serif;
+  --third-ff: "Joti One", serif;
+}
+.backdrop-blur {
+  background-color: #ffffff20;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px); /* for Safari */
+  background-color: rgba(255, 255, 255, 0.3); /* optional */
+}

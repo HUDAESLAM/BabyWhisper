@@ -1,0 +1,112 @@
+@media (max-width: 991.98px) {
+  .navbar-nav .nav-item {
+    padding: 0.5rem 0;
+    text-align: center;
+  }
+  .navbar-nav {
+    flex-direction: column !important;
+    align-items: center;
+    gap: 0.5rem !important;
+    margin-top: 1rem;
+  }
+
+  .navbar-nav .nav-item {
+    width: 100%;
+  }
+
+  .navbar-nav .nav-link {
+    width: fit-content;
+    margin: auto;
+  }
+
+  .d-flex.flex-wrap {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 0.75rem;
+  }
+
+  .dropdown-menu {
+    text-align: center;
+  }
+
+  .list-nav-act,
+  .list-nav {
+    transform: none !important;
+  }
+}
+
+.navbar {
+  border-bottom: 4px solid var(--main-color);
+}
+
+.logo-img {
+  width: 160px;
+  height: auto;
+}
+
+.nav-link:focus,
+.nav-link:hover {
+  color: var(--second-color);
+}
+
+.list-nav-act {
+  background-color: var(--main-color);
+  border: 1px solid var(--main-color);
+  box-shadow: 5px 3px 2px var(--second-color);
+  padding: 1px 10px 1px 10px;
+}
+
+a.list-nav {
+  padding: 1px 10px 1px 10px;
+  color: var(--light-blue);
+  border: 1px solid var(--second-color);
+  box-shadow: 5px 3px 2px var(--main-color);
+}
+
+.list-nav-act,
+a.list-nav {
+  transform: translateX(80%);
+}
+
+.searchBar {
+  max-height: 30px;
+  border-radius: 50px;
+  background-color: var(--light);
+  font-size: 15px;
+}
+
+.rightSide .form-control:focus {
+  background-color: var(--main-color);
+  border-color: var(--light);
+  outline: 0;
+  box-shadow: 5px 5px 5px var(--main-color);
+}
+
+.login {
+  padding: 2px 10px 2px 10px;
+  color: var(--light-blue);
+  max-height: 30px;
+  border-radius: 50px;
+  background-color: var(--light);
+  font-size: 15px;
+}
+
+.btn:hover {
+  color: var(--main-color);
+  background-color: var(--light-blue);
+}
+
+.language {
+  padding: 2px 10px 2px 10px;
+  color: var(--light-blue);
+  max-height: 30px;
+  border-radius: 90%;
+  background-color: var(--light);
+  font-size: 15px;
+}
+
+.notfication {
+  background-color: transparent;
+  padding-left: 20px;
+  color: var(--light-blue);
+}

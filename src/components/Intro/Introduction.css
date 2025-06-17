@@ -1,0 +1,31 @@
+
+.span {
+  color: var(--third-color);
+}
+
+h2.head {
+  color: var(--light-blue);
+}
+
+.click {
+  background-color: var(--second-color);
+  color: var(--white);
+  padding-inline: 6rem;
+  padding-block: 0.75rem;
+  transition: 0.5s;
+  border: 5px solid var(--white);
+}
+
+.image {
+  width: 400px;
+}
+
+.click-p p {
+  color: var(--light-blue);
+}
+
+.my-button .click:hover {
+  background-color: var(--white);
+  color: var(--second-color);
+  border: 5px solid var(--second-color);
+}

@@ -1,0 +1,17 @@
+.color{
+  color: var(--second-color ) !important;
+}
+
+
+
+.dark{
+  color: var(--blue ) !important;
+  /* box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2); */
+  background: radial-gradient(circle, rgb(231, 178, 200) 0%, rgba(148, 187, 233, 1) 100%);
+  
+  
+}
+
+.bg{
+  background: var(--third-color) !important;
+}

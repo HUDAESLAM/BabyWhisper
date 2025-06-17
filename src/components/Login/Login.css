@@ -1,0 +1,24 @@
+.eye-button {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  background-color: transparent;
+  line-height: 0;
+}
+.form-checkbox {
+  accent-color: var(--light-blue);
+  display: inline-block;
+  font-size: 110%;
+  margin-top: 2px;
+}
+.form-btn {
+  background-color: var(--second-color);
+  color: var(--white);
+  padding: 0.6rem 1.5rem;
+  font-weight: 600;
+  transition: all 0.2s cubic-bezier(0.08, 0.8, 0.9, 0.58);
+  &:hover {
+    background-color: var(--fourth-color);
+  }
+}

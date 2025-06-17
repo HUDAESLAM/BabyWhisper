@@ -1,0 +1,57 @@
+@import "bootstrap/scss/bootstrap.scss";
+* {
+  padding: 0;
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-color: #decaf6;
+  --second-color: #bd97eb;
+  --third-color: #de9ee3;
+  --fourth-color: #9040f1;
+  --light: #f4edfc;
+  --lighter: #f8f9fa;
+  --white: #ffffff;
+  --dark: #0d0d0d;
+  --black: #000000;
+  --gray: #545454;
+  --light-gray: #77808b;
+  --blue: #091f46;
+  --light-blue: #004466;
+  --ruddy-blue: #76aeff;
+  --uranian-blue: #acd7ff;
+  --bg-light: #ffffff;
+  --bg-gray: #f4ecfd;
+  --bg-light-gray: #f5effd;
+  --main-ff: "Jua", sans-serif;
+  --second-ff: "Inter", sans-serif;
+  --third-ff: "Joti One", serif;
+}
+.font-main {
+  font-family: var(--main-ff) !important;
+}
+.font-second {
+  font-family: var(--second-ff) !important;
+}
+.font-third {
+  font-family: var(--third-ff) !important;
+}
+.text-blue {
+  color: var(--blue);
+}
+
+.text-light-blue {
+  color: var(--light-blue);
+}
+.tracking-1 {
+  letter-spacing: 2px;
+}
+.cursor-pointer {
+  cursor: pointer !important;
+}
+
+.bg-blue{
+  background-color: var(--blue) !important ;
+}
