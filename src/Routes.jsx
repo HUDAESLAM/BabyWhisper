@@ -1,47 +1,87 @@
 import { createBrowserRouter, Navigate } from "react-router";
-import DefaultLayout from "./components/DefaultLayout/DefaultLayout";
 import Landing from "./components/Landing page/Landing";
 import Login from "./components/Login/Login";
 import ForgetPassword from "./components/forgetPassword/ForgetPassword";
 import ResetPassword from "./components/resetPass/ResetPassword";
 import SignUp from "./components/sign-up/SignUp";
-import AboutUs from "./components/about/AboutUs"; 
-
-
+import AboutUs from "./components/about/AboutUs";
+import Dashboard from "./components/Pages/Dashboard/Dashboard";
+import Resources from "./components/Resourses/Resources";
+import Rating from  "./components/Rating/Rating"
+import MainCry from "./components/CryDetection/mainCry/MainCry";
+import RecordCry from "./components/CryDetection/RecordCry/CryUpload";
+import UploadPage from "./components/CryDetection/UploadPage//PageUpload"
+import CryResult from "./components/CryDetection/CryResult/CryResult";
+import ChatBot from "./components/Chat/ChatBot/ChatBot";
+import ChatBox from "./components/Chat/ChatBox/ChatBox";
 
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <DefaultLayout />,
-    children: [
-      {
-        element: <Navigate to="home" replace />,
-        index: true,
-      },
-      {
-        path: "home",
-        element: <Landing />,
-      },
-      {
-        path: "login",
-        element: <Login />,
-      },
-      {
-        path: "forget-password",
-        element: <ForgetPassword />,
-      },
-      {
-        path: "reset-password",
-        element: <ResetPassword />,
-      },
-      {
-        path:"sign-up",
-        element:<SignUp />,
-      },
-      
-    ],
+    element: <Navigate to="home" replace />,
   },
+  {
+    path: "home",
+    element: <Landing />,
+  },
+  {
+    path: "login",
+    element: <Login />,
+  },
+  {
+    path: "forget-password",
+    element: <ForgetPassword />,
+  },
+  {
+    path: "reset-password",
+    element: <ResetPassword />,
+  },
+  {
+    path: "sign-up",
+    element: <SignUp />,
+  },
+  {
+    path: "about",
+    element: <AboutUs />,
+  },
+  {
+    path: "resources",
+    element: <Resources />,
+  },
+  {
+    path: "dashboard",
+    element: <Dashboard />,
+  },
+  {
+    path: "rating",
+    element: <Rating />,
+  },
+  {
+    path:"maincry",
+    element: <MainCry/>
+  },
+  {
+    path:"recordCry",
+    element:< RecordCry/>
+  },
+  {
+    path:"uploadPage",
+    element:<UploadPage/>
+  },
+  {
+    path:"cryResult",
+    element:<CryResult/>
+  },
+  {
+    path:"chatBot",
+    element:<ChatBot/>
+  },
+  {
+    path:"ChatBox",
+    element:<ChatBox/>
+  }
 ]);
+
 
 export default router;

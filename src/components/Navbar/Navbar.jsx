@@ -1,4 +1,3 @@
-// import "bootstrap/dist/css/bootstrap.min.css";
 import { useEffect, useRef, useState } from "react";
 import { FaArrowRight, FaBell } from "react-icons/fa";
 import { Link, NavLink, useLocation } from "react-router-dom";
@@ -59,7 +58,7 @@ const Navbar = () => {
       text: t.home,
     },
     {
-      link: "/sources",
+      link: "/Resources",
       text: t.sources,
     },
     {
@@ -89,7 +88,7 @@ const Navbar = () => {
               <li key={i} className="nav-item">
                 <NavLink
                   to={item.link}
-                  className={`nav-link list-nav-act rounded-pill fw-bold ${
+                  className={`nav-link list-nav-act px-3 rounded-pill fw-bold ${
                     isActive(item.link) ? "text-white" : ""
                   }`}
                 >
@@ -102,7 +101,7 @@ const Navbar = () => {
           {/* Right Side */}
           <div className="rightSide d-flex align-items-center gap-2 flex-wrap justify-content-center justify-content-lg-end ms-lg-auto mt-3 mt-lg-0">
             <input
-              className="form-control searchBar"
+              className="form-control searchBar rounded-pill"
               type="search"
               placeholder={t.search}
               style={{ maxWidth: "150px" }}

@@ -1,8 +1,37 @@
 .text-purple {
-  color: #a051f5;
+  color: blueviolet;
 }
 
-.bg-purple {
-  background-color: #a051f5;
-  color: white;
+.bg-purple{
+  background-color: blueviolet;
+}
+
+.Baby{
+  background-image: url('../../assets/BAM 2.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.Mom{
+  background-image: url('../../assets/BAM1 1.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  color: var(--light-blue)!important;
+}
+
+p ,li {
+  color: var(--blue);
 }

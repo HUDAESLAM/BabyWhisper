@@ -1,0 +1,28 @@
+.rate-main-body{
+    background-color:#BD97EB3B;
+}
+
+.cry-rate .rate-text p{
+    font-size: 20px;
+    font-weight: 400;
+    color: #0000009E;
+    text-shadow: 2px 2px 5px rgb(141, 138, 138);
+}
+
+.rate-stars i {
+    font-size: 24px;
+    color: #f5c518; 
+    text-shadow: 1px 1px 5px #f5c518;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+}
+  
+  /* Highlight filled stars */
+.rate-stars i.fas {
+    color: #f5c518; /* yellow color */
+}
+
+.rate-button button{
+    background-color:#BD97EB ;
+    border-color: #DECAF6;
+}

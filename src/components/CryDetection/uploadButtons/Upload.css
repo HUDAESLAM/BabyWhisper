@@ -1,0 +1,18 @@
+.upload-audio-button button{
+    background-color: #BD97EB;
+    color: white;
+    font-size: 16px;
+}
+.upload-audio p{
+    font-size: 20px;
+    font-style: Inter;
+    font-weight: 400;
+    color: #0000009E;
+    text-shadow: 2px 2px 5px rgb(141, 138, 138);
+}
+
+.upload-audio img{
+    border-color: #BD97EB;
+    width: 45px;
+    height: 45px;
+}

@@ -1,0 +1,16 @@
+.tap-record {
+  font-size: 20px;
+  font-style: Inter;
+  font-weight: 400;
+  color: #0000009E;
+  text-shadow: 2px 2px 5px rgb(141, 138, 138);
+}
+
+.tap-record button {
+  background-color: transparent;
+  font-size: 20px;
+  font-style: Inter;
+  font-weight: 400;
+  color: #0000009E;
+  text-shadow: 2px 2px 5px rgb(141, 138, 138);
+}

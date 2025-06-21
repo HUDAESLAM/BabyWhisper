@@ -43,6 +43,8 @@ export default function ForgetPassword() {
   });
 
   return (
+    <>
+    
     <div className="bg-cloud d-flex justify-content-center align-items-center min-vh-100 pt-4 pt-md-5 text-center flex-column">
       <ToastContainer position="top-center" />
       <div className="header px-3 px-md-0">
@@ -85,5 +87,6 @@ export default function ForgetPassword() {
         </div>
       </form>
     </div>
+    </>
   );
 }

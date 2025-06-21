@@ -1,0 +1,30 @@
+.big-circle {
+    width: 300px;
+    height: 300px;
+    background-color: #DFCEF6;
+    position: relative;
+}
+
+.middle-circle {
+    width: 350px;
+    height: 350px;
+    background-color: #DFCEF6;
+    border-color: #BD97EB;
+}
+
+.small-cirlce {
+    width: 280px;
+    height: 280px;
+    background-color: #BD97EBE3;
+    border-color: #DFCFF6;
+}
+
+.mic-icon {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #000;
+}

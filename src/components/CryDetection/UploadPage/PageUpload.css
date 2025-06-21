@@ -1,0 +1,25 @@
+.upload-rectangle{
+    border-color: #BD97EB;
+    width: 642px;
+    height: 382px;
+}
+
+.upload-rectangle img{
+    width: 45px;
+    height: 45px;
+}
+
+.upload-rectangle label{
+    width: 120px;
+    height: 50px;
+    color: white;
+    background-color: #BD97EB;
+}
+
+.upload-rectangle p{
+    font-size: 20px;
+    font-style: Inter;
+    font-weight: 400;
+    color: #0000009E;
+    text-shadow: 2px 2px 5px rgb(141, 138, 138);
+}

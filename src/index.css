@@ -52,6 +52,10 @@
   cursor: pointer !important;
 }
 
+.text-purple {
+  color: var(--fourth-color) !important;
+}
+
 .bg-blue{
   background-color: var(--blue) !important ;
 }

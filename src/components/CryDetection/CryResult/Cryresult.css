@@ -1,0 +1,13 @@
+.cry-result p {
+    color:#004466;
+    text-shadow: 2px 2px 5px rgb(141, 138, 138);
+}
+
+
+.cry-result .prediction{
+      font-size: 32px; 
+}
+
+.cry-result .suggestion{
+    font-size: 20px; 
+}

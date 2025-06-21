@@ -92,7 +92,7 @@ export default function BabywhisperForm() {
               }
 
               const response = await axios.post(
-                "http://192.168.1.7:8000/api/auth/register",
+                "http://localhost:8000/api/auth/register",
                 formData,
                 {
                   headers: {

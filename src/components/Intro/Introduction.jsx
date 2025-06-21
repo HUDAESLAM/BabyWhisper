@@ -11,6 +11,7 @@ import { FaBabyCarriage } from "react-icons/fa";
 function Intro() {
   return (
     <>
+
       <div className="container py-5 ">
         <div className="row align-items-center">
           <div className="col-lg-6 col-md-6 mb-4">
