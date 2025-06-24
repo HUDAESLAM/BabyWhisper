@@ -1,0 +1,19 @@
+.Schedule-bg {
+  background-image: url('../../assets/Cloudbg.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.bg-light-purple {
+  background-color: #f3e8ff; /* نفس درجة البنفسجي الفاتح */
+}
+
+.px-5{
+  padding-inline: 150px !important;
+}

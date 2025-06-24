@@ -1,0 +1,33 @@
+.resources-bg{
+    background-image: url('../../assets/Cloudbg.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.resource-main h3{
+    color: #004466;
+    text-shadow: 2px 2px 5px rgb(141, 138, 138);
+}
+
+.resource-type h5{
+    color: #004466;
+    text-shadow: 2px 2px 5px rgb(141, 138, 138);
+}
+
+.resource-type Button{
+    color: #004466;
+    text-shadow: 2px 2px 5px rgb(141, 138, 138);
+}
+
+.resource-cards .card-title{
+    color: #004466;
+    background-color: transparent;
+    
+}

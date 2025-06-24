@@ -23,6 +23,8 @@ export default function UploadPage() {
 
       try {
   const token = localStorage.getItem("token");
+  console.log("Sending token:", token);
+
 
   const response = await axios.post(
     "http://localhost:8000/api/records/uploadRecords",

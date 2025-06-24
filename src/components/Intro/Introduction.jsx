@@ -7,8 +7,10 @@ import { FaMicrophoneAlt } from "react-icons/fa";
 import { LuBaby } from "react-icons/lu";
 import { GiSoundWaves } from "react-icons/gi";
 import { FaBabyCarriage } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 function Intro() {
+    const navigate = useNavigate();
   return (
     <>
 
@@ -61,8 +63,11 @@ function Intro() {
 
         <div className="row py-5 align-items-center my-button">
           <div className="col-lg-6 col-md-6 mb-4 d-flex flex-column align-items-center text-center click-p">
-            <button className="click fs-4 mb-3 rounded-pill">
+            <button className="click fs-4 mb-3 rounded-pill" 
+            onClick={() => {navigate("/login");}}
+            >
               <FaMicrophoneAlt /> Try Now <FaArrowRight />
+              
             </button>
             <p>Record your baby's crying</p>
           </div>

@@ -24,6 +24,7 @@ export default function ForgetPassword() {
           { email: values.email }
         );
         toast.success(res.data.message || "Check your email for reset link");
+        localStorage.setItem("resetEmail", values.email);
         resetForm();
 
         setTimeout(() => {

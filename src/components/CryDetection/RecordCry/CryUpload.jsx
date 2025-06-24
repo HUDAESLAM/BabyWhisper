@@ -5,6 +5,8 @@ import axios from "axios";
 import "./CryUpload.css";
 import Mic from "../microphone/Mic";
 import CryHeader from "../cryHeader/Cryheader";
+import NavUser from "../../UserNavbar/NavUser";
+import Sidebar from "../../SideBar/Sidebar";
 
 export default function RecordCry() {
   const navigate = useNavigate();
@@ -77,6 +79,8 @@ export default function RecordCry() {
 
       const formData = new FormData();
       formData.append("file", blob, "recorded_audio.wav");
+      const token = localStorage.getItem("token");
+      console.log("Sending token:", token);
 
       try {
         const response = await axios.post(
@@ -85,7 +89,7 @@ export default function RecordCry() {
           {
             headers: {
               "Content-Type": "multipart/form-data",
-              Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJlbWFpbCI6Imh1ZGExMTExQGdtYWlsLmNvbSIsImlhdCI6MTc1MDI4MTQzNywiZXhwIjoxNzU4MDU3NDM3fQ.YROj5DdnjKIERJ1SKg6-0ShcmbetqoT7WzbUr25DQj8`,
+              "Authorization": `Bearer ${token}`,
             },
             onUploadProgress: (progressEvent) => {
               const percent = Math.round(
@@ -95,15 +99,18 @@ export default function RecordCry() {
             },
           }
         );
+        console.log("Upload response:", response.data);
+        
+
 
         navigate("/cryResult", { state: { responseData: response.data } });
       } catch (error) {
-        console.error("Upload failed:", error);
-        alert("Prediction failed. Please try again.");
+  console.error("Upload failed:", error.response?.data || error.message); // ✅ هنا هنطبع الخطأ بشكل أوضح
+  alert("Prediction failed. Please try again.");
       } finally {
         setShouldUpload(false);
         setAudioChunks([]);
-        setProgress(0);
+        
       }
     };
 
@@ -111,7 +118,9 @@ export default function RecordCry() {
   }, [audioChunks, shouldUpload, navigate]);
 
   return (
-    <>
+    <div className="chat-bg">
+    <Sidebar/>
+    <NavUser/>
       <div className="min-h-screen bg-gradient-to-r from-white to-purple-100 flex flex-col items-center justify-center text-gray-800 font-sans">
         <main className="text-center mt-20 px-4">
           <CryHeader />
@@ -148,6 +157,6 @@ export default function RecordCry() {
           </div>
         </main>
       </div>
-    </>
+    </div>
   );
 }

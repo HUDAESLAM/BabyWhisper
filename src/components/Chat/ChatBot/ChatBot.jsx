@@ -5,8 +5,11 @@ import axios from "axios";
 import chatIcon from "../../../assets/ChatIcon.png";
 import "./ChatBot.css";
 import BackButton from "../../common/BackButton/BackButton";
+import Sidebar from "../../SideBar/Sidebar";
+import NavUser from "../../UserNavbar/NavUser";
+import { FaArrowUp } from "react-icons/fa";
 
-export default function ChatBot({ onQuestionAnswered }) {
+export default function ChatBot() {
   const [categories, setCategories] = useState([]); // ["Child", "Mother"]
   const [selectedCategory, setSelectedCategory] = useState(null);
 
@@ -14,14 +17,14 @@ export default function ChatBot({ onQuestionAnswered }) {
   const [selectedSubcategory, setSelectedSubcategory] = useState(null);
 
   const [questions, setQuestions] = useState([]);
-  const [selectedQuestions, setSelectedQuestions] = useState(null);
+  // const [selectedQuestions, setSelectedQuestions] = useState(null);
 
   const navigate = useNavigate();
 
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/get_categories");
+        const res = await axios.get("http://localhost:5001/get_categories");
         const categories = res.data?.categories;
 
         if (Array.isArray(categories)) {
@@ -43,7 +46,7 @@ export default function ChatBot({ onQuestionAnswered }) {
       if (!selectedCategory) return;
 
       try {
-        const res = await axios.get(`http://localhost:5000/get_subcategories`, {
+        const res = await axios.get(`http://localhost:5001/get_subcategories`, {
           params: { category: selectedCategory },
         });
 
@@ -68,7 +71,7 @@ export default function ChatBot({ onQuestionAnswered }) {
 
       try {
         const res = await axios.post(
-          `http://localhost:5000/get_questions_by_category`,
+          `http://localhost:5001/get_questions_by_category`,
           {
             category: selectedCategory,
             subcategory: selectedSubcategory,
@@ -102,7 +105,7 @@ export default function ChatBot({ onQuestionAnswered }) {
 
   const handleQuestionClick = async (question) => {
     try {
-      const res = await axios.post("http://localhost:5000/ask_question", {
+      const res = await axios.post("http://localhost:5001/ask_question", {
         question,
       });
       const answer =
@@ -138,84 +141,85 @@ export default function ChatBot({ onQuestionAnswered }) {
 
   return (
     <>
-      <div className="Container-fluid">
-        <div className="main-chatbot mt-4 d-flex  flex-column  align-items-center justify-content-center">
-          <h2 className="text-center">Chatbot</h2>
+        <Sidebar/>
+        <NavUser/>
+      <div className="Container mt-5 pt-3 chat-bg">
+  <div className="main-chatbot mt-4 d-flex flex-column align-items-center justify-content-center">
+    <h2 className="text-center">Chatbot</h2>
 
-          <div className="chat-header d-flex flex-row  mt-3">
-            <p className="text-center">What Can I help With</p>
+    <div className="chat-header d-flex flex-column flex-md-row align-items-center justify-content-center mt-3 text-center gap-2">
+      <p className="mb-0 ms-5">What Can I help With</p>
+      <img src={chatIcon} alt="ChatBot icon" className="ms-md-3" />
+    </div>
 
-            <img src={chatIcon} alt="ChatBot icon" className="ms-3" />
-          </div>
-
-          <div className="chat-labels w-3 h-3 mt-5 align-items-center  d-flex justify-content-center flex-wrap w-75 ">
-            {!selectedCategory ? (
-              <>
-                {/* <h2>Select a Category</h2> */}
-                {categories.map((cat) => (
-                  <button
-                    className="btn btn-secondary px-3 mx-3"
-                    key={cat}
-                    onClick={() => setSelectedCategory(cat)}
-                  >
-                    {cat}
-                  </button>
-                ))}
-              </>
-            ) : !selectedSubcategory ? (
-              <>
-                {/* <h3>Subcategories for {selectedCategory}</h3> */}
-                {subcategories.length > 0 ? (
-                  subcategories.map((sub) => (
-                    <button
-                      className="btn btn-secondary px-3 mx-3 my-2"
-                      key={sub}
-                      onClick={() => handleSubcategoryClick(sub)}
-                    >
-                      {sub}
-                    </button>
-                  ))
-                ) : (
-                  <p>No subcategories found.</p>
-                )}
-              </>
-            ) : (
-              <>
-                {/* <h4>Questions for {selectedSubcategory}</h4> */}
-                {questions.length > 0 ? (
-                  questions.map((q, index) => (
-                    <button
-                      key={index}
-                      className="btn btn-secondary px-3 mx-3 my-2"
-                      onClick={() => handleQuestionClick(q)}
-                    >
-                      {q}
-                    </button>
-                  ))
-                ) : (
-                  <p>No questions found.</p>
-                )}
-              </>
-            )}
-          </div>
-
-          <div className="chat-box  border border-1 border-dark rounded-4 d-flex justify-content-between px-4 py-4">
-            <p className="">Select question To Answer you . . . . </p>
+    <div className="chat-labels w-100 mt-5 d-flex justify-content-center flex-wrap px-3 gap-2">
+      {!selectedCategory ? (
+        <>
+          {categories.map((cat) => (
             <button
-              type="button"
-              className="btn btn-sm rounded-circle align-self-end"
+              className="btn btn-secondary px-3 mx-2 my-2"
+              key={cat}
+              onClick={() => setSelectedCategory(cat)}
             >
-              <i className="fa-solid fa-arrow-up"></i>
+              {cat}
             </button>
-          </div>
-        </div>
-
-        <div className="button-back ">
-          {(selectedCategory || selectedSubcategory) && (
-            <BackButton onClick={handleBack} />
+          ))}
+        </>
+      ) : !selectedSubcategory ? (
+        <>
+          {subcategories.length > 0 ? (
+            subcategories.map((sub) => (
+              <button
+                className="btn btn-secondary px-3 mx-2 my-2"
+                key={sub}
+                onClick={() => handleSubcategoryClick(sub)}
+              >
+                {sub}
+              </button>
+            ))
+          ) : (
+            <p>No subcategories found.</p>
           )}
-        </div>
-      </div>
+        </>
+      ) : (
+        <>
+          {questions.length > 0 ? (
+            questions.map((q, index) => (
+              <button
+                key={index}
+                className="btn btn-secondary px-3 mx-2 my-2"
+                onClick={() => handleQuestionClick(q)}
+              >
+                {q}
+              </button>
+            ))
+          ) : (
+            <p>No questions found.</p>
+          )}
+        </>
+      )}
+    </div>
+
+    <div className="chat-box border border-1 border-dark rounded-5 d-flex flex-column flex-sm-row justify-content-between align-items-center px-4  w-md-75 gap-3">
+      <p className="mb-0 text-center text-sm-start">
+        Select question To Answer you . . . .
+      </p>
+      <button
+        type="button"
+        className="btn btn-sm rounded-circle"
+      >
+        <FaArrowUp />
+      </button>
+    </div>
+  </div>
+
+  <div className="button-back mt-4 d-flex justify-content-center">
+    {(selectedCategory || selectedSubcategory) && (
+      <BackButton onClick={handleBack} />
+    )}
+  </div>
+</div>
+
     </>
   );
 }

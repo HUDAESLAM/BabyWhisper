@@ -4,6 +4,8 @@ import UploadButton from "../uploadButtons/Upload";
 import { useNavigate } from "react-router-dom";
 import "./mainCry.css";
 import CryHeader from "../cryHeader/Cryheader";
+import NavUser from "../../UserNavbar/NavUser";
+import Sidebar from "../../SideBar/Sidebar";
 
 export default function MainCry() {
   const navigate = useNavigate();
@@ -18,7 +20,9 @@ export default function MainCry() {
 
   return (
     <>
-      <div className="container-fluid mainCry">
+      <div className="container-fluid mainCry mt-5 pt-5">
+        <NavUser/>
+        <Sidebar/>
         <div className="d-flex align-items-center justify-content-center flex-column">
           <div>
           <CryHeader />

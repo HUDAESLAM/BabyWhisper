@@ -1,10 +1,10 @@
-.main-chatbot h2{
+.main-chatbot h2 {
     font-size: 36px;
     color: #004466;
     text-shadow: 2px 2px 5px rgb(141, 138, 138);
 }
 
-.chat-header p{
+.chat-header p {
     color: #004466;
     font-size: 48px;
     /* border-radius: 1px;
@@ -17,7 +17,7 @@
 }
 
 
-.chat-box{
+.chat-box {
     width: 65%;
     height: 20vh;
     margin-top: 200px;
@@ -29,6 +29,18 @@
     color: white;
 }
 
-.chat-box p{
+.chat-box p {
     color: #004466;
+}
+
+.chat-bg {
+    background-image: url('../../../assets/Cloudbg.jpg');
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; */
 }

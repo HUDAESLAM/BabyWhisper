@@ -29,7 +29,7 @@ export default function CryResult() {
 
   return (
     <>
-      <div className="continer-fluid">
+      <div className="continer-fluid chat-bg">
         <div className="main-content mt-4 d-flex  flex-column  align-items-center justify-content-center">
           <div className="mb-4 mt-3">
             <img
@@ -52,9 +52,7 @@ export default function CryResult() {
           </div>
         </div>
 
-        <div>
-          <BackButton to="/uploadRecord" />
-        </div>
+        
       </div>
     </>
   );

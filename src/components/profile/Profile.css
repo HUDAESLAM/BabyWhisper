@@ -1,0 +1,22 @@
+.entre-message-icon{
+    background-color: #004466;
+    color: white;
+    border-radius: 30px ;
+  } 
+    
+  .entre-profile-body h4, span{
+   color: #004466;
+  }
+  
+  .entre-invest-btn{
+    background-color: #004466;
+    color: white;
+  }
+  
+  .about-section{
+    background-color:#F6F6F6;
+  }
+ 
+  .about-section h5 {
+    color: #004466;
+  }

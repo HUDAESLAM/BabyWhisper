@@ -7,14 +7,19 @@ import SignUp from "./components/sign-up/SignUp";
 import AboutUs from "./components/about/AboutUs";
 import Dashboard from "./components/Pages/Dashboard/Dashboard";
 import Resources from "./components/Resourses/Resources";
-import Rating from  "./components/Rating/Rating"
+import Rating from "./components/Rating/Rating";
 import MainCry from "./components/CryDetection/mainCry/MainCry";
 import RecordCry from "./components/CryDetection/RecordCry/CryUpload";
-import UploadPage from "./components/CryDetection/UploadPage//PageUpload"
+import UploadPage from "./components/CryDetection/UploadPage//PageUpload";
 import CryResult from "./components/CryDetection/CryResult/CryResult";
 import ChatBot from "./components/Chat/ChatBot/ChatBot";
 import ChatBox from "./components/Chat/ChatBox/ChatBox";
-
+import Profile from "./components/profile/Profile";
+import ProfileEdit from "./components/profileEdit/ProfileEdit";
+// import ProfileEditForm from "./components/profileEditForm/ProfileEditForm";
+import Logout from "./components/logout/Logout";
+import Schedule from "./components/schedule/Schedule";
+import Loading from "./components/loadingScreen/Loading";
 
 const router = createBrowserRouter([
   {
@@ -58,30 +63,49 @@ const router = createBrowserRouter([
     element: <Rating />,
   },
   {
-    path:"maincry",
-    element: <MainCry/>
+    path: "maincry",
+    element: <MainCry />,
   },
   {
-    path:"recordCry",
-    element:< RecordCry/>
+    path: "recordCry",
+    element: <RecordCry />,
   },
   {
-    path:"uploadPage",
-    element:<UploadPage/>
+    path: "uploadPage",
+    element: <UploadPage />,
   },
   {
-    path:"cryResult",
-    element:<CryResult/>
+    path: "cryResult",
+    element: <CryResult />,
   },
   {
-    path:"chatBot",
-    element:<ChatBot/>
+    path: "chatBot",
+    element: <ChatBot />,
   },
   {
-    path:"ChatBox",
-    element:<ChatBox/>
+    path: "ChatBox",
+    element: <ChatBox />,
+  },
+  {
+    path: "logout",
+    element: <Logout />,
+  },
+  {
+    path: "profile",
+    element: <Profile />,
+  },
+  {
+    path: "profileEdit",
+    element: <ProfileEdit />,
+  },
+  {
+    path: "schedule",
+    element: <Schedule />,
+  },
+  {
+    path:"loading",
+    element:<Loading/>
   }
 ]);
-
 
 export default router;

@@ -5,9 +5,11 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
 import Swal from "sweetalert2";
 import { MdOutlinePhotoCamera } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
 // import Navbar from "../Navbar/Navbar.jsx";
 
 export default function BabywhisperForm() {
+  const navigate = useNavigate();
   const [preview, setPreview] = useState(null);
   const fileInputRef = useRef();
   const profileImageRef = useRef(null);
@@ -81,7 +83,10 @@ export default function BabywhisperForm() {
               formData.append("baby_name", values.babyName);
               formData.append("birth_date", values.birthDate);
               formData.append("gender", values.gender);
-              formData.append("medical_conditions", values.medical_conditions || "");
+              formData.append(
+                "medical_conditions",
+                values.medical_conditions || ""
+              );
 
               if (profileImageRef.current) {
                 formData.append("profile_picture", profileImageRef.current);
@@ -106,12 +111,15 @@ export default function BabywhisperForm() {
                 title: "Successfully SignUp!",
                 text: "We received your data!",
                 icon: "success",
+              }).then(() => {
+                navigate("/login");
               });
+
               resetForm();
               setPreview(null);
               profileImageRef.current = null;
             } catch (error) {
-              console.error(error.response?.data || error.message); 
+              console.error(error.response?.data || error.message);
               Swal.fire({
                 icon: "error",
                 title: "Oops...",
