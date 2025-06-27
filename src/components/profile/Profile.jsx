@@ -28,7 +28,7 @@ useEffect(() => {
           },
         }
       );
-      console.log("🔁 Updated user from API:", res.data);
+      console.log("Updated user from API:", res.data);
       setUser(res.data);
     } catch (error) {
       setError(error.message);

@@ -65,7 +65,7 @@ export default function NavUser() {
             {/* end of search bar  */}
             <div
               className="d-flex align-items-center gap-3 me-3 ">
-              <Link className="nav-link main fs-4" to="#">
+              <Link className="nav-link main fs-4" to="/notification">
                     {icon.notification}
                   </Link>
             </div>

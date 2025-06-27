@@ -20,6 +20,7 @@ import ProfileEdit from "./components/profileEdit/ProfileEdit";
 import Logout from "./components/logout/Logout";
 import Schedule from "./components/schedule/Schedule";
 import Loading from "./components/loadingScreen/Loading";
+import Notification from "./components/Notification/notification";
 
 const router = createBrowserRouter([
   {
@@ -105,6 +106,10 @@ const router = createBrowserRouter([
   {
     path:"loading",
     element:<Loading/>
+  },
+  {
+    path:"notification",
+    element:<Notification/>
   }
 ]);
 
